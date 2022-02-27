@@ -8,7 +8,7 @@ Currently supported:
 """
 import re
 import unicodedata
-from utils.tokenizers import SimpleTokenizer
+from eq.utils.tokenizers import SimpleTokenizer
 
 
 def normalize(text):

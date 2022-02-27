@@ -5,13 +5,12 @@ import json
 from pyserini.search import SimpleSearcher
 from tqdm import tqdm
 
-import utils.ion as ion
-import utils.tokenizers as tokenizers
+from eq.utils import ion
 
-from utils.has_answer_fn import HAS_ANS_FNS
+from eq.utils.has_answer_fn import HAS_ANS_FNS
 
 
-OPEN_FNS = { 'json': ion.read_json, 'jsonl': ion.read_jsonl }
+OPEN_FNS = { 'json': ion.read_json, 'jsonl': ion.read_jsonl}
 
 
 def search(dataset, n_docs, has_answer_fn, searcher, pid2title):

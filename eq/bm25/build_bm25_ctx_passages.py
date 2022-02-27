@@ -2,8 +2,7 @@
 Build passage shards
 """
 import argparse
-import os
-import utils.ion as ion
+from eq.utils import ion
 from tqdm import tqdm
 
 

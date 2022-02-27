@@ -1,12 +1,11 @@
 import argparse
 import glob
-import json
 from collections import defaultdict
 from tqdm import tqdm
 
-import utils.ion as ion
-from utils.has_answer_fn import HAS_ANS_FNS
-from utils.tokenizers import SimpleTokenizer
+from eq import utils as ion
+from eq.utils import HAS_ANS_FNS
+from eq.utils import SimpleTokenizer
 
 
 AVERAGE = "Average"
