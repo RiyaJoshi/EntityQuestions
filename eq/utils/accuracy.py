@@ -4,8 +4,11 @@ from collections import defaultdict
 from tqdm import tqdm
 
 from eq import utils as ion
-from eq.utils import HAS_ANS_FNS
-from eq.utils import SimpleTokenizer
+#from eq.utils import HAS_ANS_FNS
+from eq.utils.has_answer_fn import HAS_ANS_FNS
+#from eq.utils import SimpleTokenizer
+from eq.utils.tokenizers import SimpleTokenizer
+
 
 
 AVERAGE = "Average"
