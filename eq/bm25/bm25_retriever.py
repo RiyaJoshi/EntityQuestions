@@ -53,14 +53,16 @@ def main():
 
     has_answer_fn = HAS_ANS_FNS[args.answer_type]
     open_fn = OPEN_FNS[args.input_file_type]
-    pid2title = ion.read_json(args.passage_id_to_title_path, log=True)
-    searcher = SimpleSearcher(args.index_path)
+    #pid2title = ion.read_json(args.passage_id_to_title_path, log=True)
+    #searcher = SimpleSearcher(args.index_path)
 
     for qa_file in qa_files:
         dataset = open_fn(qa_file, log=True)
-        results = search(dataset, args.n_docs, has_answer_fn, searcher, pid2title)
-        outfile = args.output_dir + qa_file.split('/')[-1]
-        ion.write_json(outfile, results, log=True, pretty=True)
+        import pdb
+        pdb.set_trace()
+        #results = search(dataset, args.n_docs, has_answer_fn, searcher, pid2title)
+        #outfile = args.output_dir + qa_file.split('/')[-1]
+        #ion.write_json(outfile, results, log=True, pretty=True)
 
 
 def check_args(args):

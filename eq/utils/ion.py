@@ -6,6 +6,7 @@ the local system.
 import json
 import random
 from pathlib import Path
+import re
 
 
 ###############################################################################
@@ -22,6 +23,7 @@ def read_file(infile, handle_file, log=False, skip_first_line=False):
         data = handle_file(f)
     if log:
         print('  Done.')
+    print(data[0:2])
     return data
 
 
@@ -35,7 +37,7 @@ def read_jsonl(infile, log=False):
     return read_file(infile, handler, log=log)
 
 
-def read_tsv(infile, row_fn=lambda x: x, log=False, skip_first_line=False):
+def read_tsv(infile, row_fn=lambda x: {'question': x[0], 'answers': re.split("',\s*'", x[1].strip()[2:-2])}, log=False, skip_first_line=False):
     handler = lambda f: [row_fn(line.split('\t')) for line in f.readlines()]
     return read_file(infile, handler, log=log, skip_first_line=skip_first_line)
 
