@@ -3,7 +3,8 @@ import glob
 from collections import defaultdict
 from tqdm import tqdm
 
-from eq import utils as ion
+#from eq import utils as ion
+from eq.utils import ion
 #from eq.utils import HAS_ANS_FNS
 from eq.utils.has_answer_fn import HAS_ANS_FNS
 #from eq.utils import SimpleTokenizer
