@@ -23,7 +23,7 @@ def read_file(infile, handle_file, log=False, skip_first_line=False):
         data = handle_file(f)
     if log:
         print('  Done.')
-    print(data[0:2])
+    #print(data[0:2])
     return data
 
 
