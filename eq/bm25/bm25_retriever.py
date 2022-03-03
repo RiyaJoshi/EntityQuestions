@@ -10,7 +10,7 @@ from eq.utils import ion
 from eq.utils.has_answer_fn import HAS_ANS_FNS
 
 
-OPEN_FNS = { 'json': ion.read_json, 'jsonl': ion.read_jsonl}
+OPEN_FNS = {'tsv': ion.read_tsv, 'json': ion.read_json, 'jsonl': ion.read_jsonl}
 
 
 def search(dataset, n_docs, has_answer_fn, searcher, pid2title):
