@@ -49,6 +49,8 @@ def main():
     args = parse_args()
 
     qa_files = glob.glob(args.input) if args.glob else [args.input]
+    import pdb
+    pdb.set_trace()
     print('Input files: [ {} ]'.format(', '.join(qa_files)))
 
     has_answer_fn = HAS_ANS_FNS[args.answer_type]
