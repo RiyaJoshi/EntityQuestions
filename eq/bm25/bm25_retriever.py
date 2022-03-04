@@ -46,11 +46,13 @@ def search(dataset, n_docs, has_answer_fn, searcher, pid2title):
 
 
 def main():
+    print("Parsing args")
     args = parse_args()
-
+    print("Parsed args")
+    print('args.glob', args.glob)
     qa_files = glob.glob(args.input) if args.glob else [args.input]
-    import pdb
-    pdb.set_trace()
+    #import pdb
+    #pdb.set_trace()
     print('Input files: [ {} ]'.format(', '.join(qa_files)))
 
     has_answer_fn = HAS_ANS_FNS[args.answer_type]
